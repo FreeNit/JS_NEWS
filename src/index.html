@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./sass/index.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a2e39f8f88.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+  <body id="index">
+    <!-- ❗️❗️❗️ Header partial -->
+    <include src="./partials/_header.html"></include>
+    <main>
+      <div class="filters-wrapper">
+        <!-- ❗️❗️❗️ Filters partial -->
+        <include src="./partials/_filters.html"></include>
+      </div>
+
+      <div class="news container">
+        <!-- ❗️❗️❗️ Weather partial -->
+        <include src="./partials/_weather.html"></include>
+
+        <!-- ❗️❗️❗️ News partial -->
+        <include src="./partials/_news.html"></include>
+
+        <!-- ❗️❗️❗️ Pagination -->
+        <include src="./partials/_pagination.html"></include>
+      </div>
+    </main>
+
+    <!-- ❗️❗️❗️ Footer partial -->
+    <include src="./partials/_footer.html"></include>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@latest/dist/ionicons.js"
+    ></script>
   </body>
 </html>

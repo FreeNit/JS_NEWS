@@ -1,0 +1,108 @@
+.filter-wrapper--date .date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .date-label {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.375;
+
+    &.dark-theme {
+      color: var(--light-color);
+    }
+  }
+}
+
+.date-input {
+  color: #4440f6;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.date-picker {
+  width: 152px;
+  height: 31px;
+  left: 0px;
+  background-color: var(--light-color);
+
+  border: 1px solid #111321;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 46px;
+  font-size: 12px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    width: 168px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 190px;
+  }
+}
+
+.date-picker.flatpickr-input.active {
+  outline: none;
+  border: 1px solid #4440f6;
+  color: #ffffff;
+  background-color: #4440f6;
+}
+.date-label {
+  margin-right: 37px;
+  color: #111321;
+  font-size: 24px;
+}
+:placeholder-shown {
+  font-size: 12px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.date-svg-calendar {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 12px;
+  fill: currentColor;
+}
+
+.date-down {
+  fill: currentColor;
+  margin-right: 10px;
+  margin-top: 6px;
+  position: absolute;
+  top: 30%;
+  right: 1px;
+  transform: translateY(-50%);
+}
+.date-up {
+  display: none;
+  fill: #f8f8f8;
+  margin-right: 10px;
+  margin-top: 6px;
+  position: absolute;
+  top: 30%;
+  right: 1px;
+  transform: translateY(-50%);
+}
+
+.calendar {
+  position: relative;
+}
+.flatpickr-calendar.animate.open {
+  background: #f8f8f8;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+body .flatpickr-months .flatpickr-next-month {
+  fill: #4440f6;
+  stroke-width: 1px;
+}
+body .flatpickr-months .flatpickr-prev-month {
+  fill: #4440f6;
+}
